@@ -1,6 +1,6 @@
 package br.com.alura.oopmusicplayer.models;
 
-public class Song extends Audio {
+public class Music extends Audio {
     private String  album;
     private String  artist;
     private String  genre;
