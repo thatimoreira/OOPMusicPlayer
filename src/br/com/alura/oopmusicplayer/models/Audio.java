@@ -30,7 +30,7 @@ public class Audio {
         this.totalLikes++;
     }
 
-    public void setTotalPlays() {
+    public void play() {
         this.totalPlays++;
     }
 }
