@@ -7,7 +7,7 @@ public class Audio {
     private int     rating;
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public void setTitle(String title) {
@@ -15,15 +15,15 @@ public class Audio {
     }
 
     public int getTotalPlays() {
-        return totalPlays;
+        return this.totalPlays;
     }
 
     public int getTotalLikes() {
-        return totalLikes;
+        return this.totalLikes;
     }
 
     public int getRating() {
-        return rating;
+        return this.rating;
     }
 
     public void like() {

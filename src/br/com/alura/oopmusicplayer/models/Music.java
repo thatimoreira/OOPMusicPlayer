@@ -6,7 +6,7 @@ public class Music extends Audio {
     private String  genre;
 
     public String getAlbum() {
-        return album;
+        return this.album;
     }
 
     public void setAlbum(String album) {
@@ -14,7 +14,7 @@ public class Music extends Audio {
     }
 
     public String getArtist() {
-        return artist;
+        return this.artist;
     }
 
     public void setArtist(String artist) {
@@ -22,10 +22,32 @@ public class Music extends Audio {
     }
 
     public String getGenre() {
-        return genre;
+        return this.genre;
     }
 
     public void setGenre(String genre) {
         this.genre = genre;
+    }
+
+    @Override
+    public int getRating() {
+        if (this.getTotalPlays() > 1000000) {
+            return 5;
+        }
+        if (this.getTotalPlays() > 500000) {
+            return 4;
+        }
+        if (this.getTotalPlays() > 200000) {
+            return 3;
+        }
+        if (this.getTotalPlays() > 50000) {
+            return 2;
+        }
+        if (this.getTotalPlays() > 10000) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
     }
 }

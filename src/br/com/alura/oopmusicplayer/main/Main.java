@@ -1,6 +1,7 @@
 package br.com.alura.oopmusicplayer.main;
 
 import br.com.alura.oopmusicplayer.models.Music;
+import br.com.alura.oopmusicplayer.models.MyFavorites;
 import br.com.alura.oopmusicplayer.models.Podcast;
 
 public class Main {
@@ -24,7 +25,7 @@ public class Main {
         Podcast myPodcast = new Podcast();
         myPodcast.setTitle("Hipsters Ponto Tech");
         myPodcast.setHost("Paulo Silveira");
-        myPodcast.setDecsription("Discussion about technology, programming, design, startups, and the latest trends.");
+        myPodcast.setDescription("Discussion about technology, programming, design, startups, and the latest trends.");
 
         // simulating the plays
         for (int i = 0; i < 2001; i ++){
@@ -33,7 +34,11 @@ public class Main {
 
         // simulating the likes
         for (int i = 0; i < 1961; i++){
-            myMusic.like();
+            myPodcast.like();
         }
+
+        MyFavorites favorites = new MyFavorites();
+        favorites.addToFavorites(myMusic);
+        favorites.addToFavorites(myPodcast);
     }
 }
